@@ -2,8 +2,15 @@
 public class Sports {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Sport thisport = new Sport[5];
+		int TotalAthleats = 15;
+		dividetosport(thisport[]);
 
+	}
+
+	private static void dividetosport(Class<thisport[]> class1) {
+		
+		
 	}
 
 }
