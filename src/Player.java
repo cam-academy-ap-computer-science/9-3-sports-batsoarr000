@@ -5,13 +5,12 @@ public class Player {
 	private int number;
 	private String name;
 	private boolean isteam;
-	public void main() {
-		
+	public void Player() {
+		private Player[] player;
 	}
 	public String toString() {
 		return "Name" + name + "Number" + number + "IsTeam" + isteam;
 	}
-	
 	public boolean isIsteam() {
 		return isteam;
 	}
