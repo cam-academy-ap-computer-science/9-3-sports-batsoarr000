@@ -1,4 +1,6 @@
 
-public class Sport extends SportsMain{
+public class Sport {
+	//private
+	//public;
 	
 }
