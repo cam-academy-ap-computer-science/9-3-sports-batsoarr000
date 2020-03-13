@@ -1,0 +1,52 @@
+Hi Arrow -
+
+I'll try to help out a bit.   I think you have a good start, but just need some organization.   Slow down, and draw yourself a diagram.  It will help, also, to:
+1.  Look at Mark C's notes on the project on Google Classroom
+2.  Maybe look at the Zoo class in the slides, which is very similar.
+
+Looking at the whole project, here is all the data we really need to keep:
+ - 3 bits of data generic (common) to all sports players.
+ - 3 bits of data unique to each sport's player.
+ - A place to store all of the Players.
+
+Going about this methodically:
+ where would you keep your generic data?  Probably in a generic 'Player' class.
+ where would you keep sport-specific data? Probably in the CricketPlayer, ArcheryPlayer etc classes.
+ where would you store your List or Array of Players?  Probably in the Sports class.
+
+So - 
+   Sports.java is a class that HAS-A (stores) an ArrayList or array of Players of object type Player.
+   Player.java is a class that has generic data (name, hometown, age, etc) common to all players.
+   CricketPlayer.java is a class that IS-A Player (extends Player, inherits data from Player) that has specific data (bat type, hitrate etc)
+
+All the CricketPlayer.java class really needs to do is store the specific data, and have a constructor that sets the player data, both generic and specific:
+         
+public class CricketPlayer extends Player {
+	private String batType;
+	private double hitRate;
+	// Constructor takes generic Player data and specific Cricket data
+	public CricketPlayer (String name, String hometown, int age, String batType, double hitRate) {
+		// Call superclass Player's constructor to set the generic stuff
+		super(name, hometown, age);
+		this.batType = batType;
+		this.hitRate = hitRate;
+	}
+}
+
+And you're done with this class. (although you might need a toString method, too :-)
+
+Player.java will have a constructor that sets the generic info.   
+
+In main(), you'll call loadPlayers() or something like that, to create your database.
+
+It will do something like this:
+	// First create your whole sporting world - your constructor might be different and take maxplayer argument
+	Sports myAthletes = new Sports();
+
+	Player a = new CricketPlayer("Virat Kohli", "Bangladesh, India", 30, "SomeAwesomeBat", .473);
+
+	myAthletes.addPlayer(a);
+
+	// (and so on for every player)
+
+Does this help, a bit?
