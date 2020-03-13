@@ -1,6 +1,10 @@
 
 public class Sport {
-	//private
+//private
 	//public;
+	public Sport(int i) {
+		
+	}
+	
 	
 }

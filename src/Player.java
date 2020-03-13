@@ -5,8 +5,9 @@ public class Player {
 	private int number;
 	private String name;
 	private boolean isteam;
-	public void Player() {
-		private Player[] player;
+	private Player[] player;
+	public void Player(int number, String name, boolean isteam, boolean b, int i, double d) {
+	
 	}
 	public String toString() {
 		return "Name" + name + "Number" + number + "IsTeam" + isteam;

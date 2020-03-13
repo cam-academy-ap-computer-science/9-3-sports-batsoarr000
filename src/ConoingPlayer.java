@@ -5,7 +5,7 @@ public class ConoingPlayer extends Player{
 	private boolean inwater;
 	private int stroke;
 	private double strokespeed;
-	public String toString() {
+	public String toString(boolean inwater, int stroke, double strokespeed) {
 		return super.toString() + "In Water" + inwater + "Stroke" + stroke + "Stroke Speed" + strokespeed;
 	}
 	public boolean isInwater() {
